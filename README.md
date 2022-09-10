@@ -8,7 +8,8 @@ in your playbook, define like below:
 
 ```
 - hosts: all
-  sudo: yes
+  become: yes
+  become_user: root
   vars:
     nginx_user: "nginx"
     nginx_worker_proccesses: "1"
