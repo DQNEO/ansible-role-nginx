@@ -22,6 +22,8 @@
   template: src=nginx.conf dest=/etc/nginx/nginx.conf owner=root group=root mode=0644
 - name: ltsv conf
   template: src=ltsv.conf dest=/etc/nginx/log_format_ltsv.conf owner=root group=root mode=0644
+- name: mime types
+  template: src=mime.types dest=/etc/nginx/mime.types owner=root group=root mode=0644
 
 - name: start server
   service: name=nginx state=started enabled=yes
